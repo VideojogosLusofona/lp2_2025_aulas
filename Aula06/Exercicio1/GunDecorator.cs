@@ -1,0 +1,15 @@
+namespace Exercicio1
+{
+    public abstract class GunDecorator : Gun
+    {
+        private readonly Gun gun;
+
+        public override int AmmoCapacity => gun.AmmoCapacity;
+        public override float NoiseLevel => gun.NoiseLevel;
+
+        public GunDecorator(Gun gun)
+        {
+            this.gun = gun;
+        }
+    }
+}
